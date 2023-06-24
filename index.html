@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo</title>
+    <title>Cálculo</title>
 </head>
 <body>
     <h1>Hola!</h1>
-    <h3>Este es un calculo simple para saber cuánto podés gastar en cuotas considerando los límites de tu tarjeta bancarizada</h3>
-    
+    <h3>Este es un cálculo simple para saber cuánto podés gastar en cuotas considerando los límites de tu tarjeta bancarizada</h3>
+    <form>
+        <label for="limite_un_pago">Límite en un pago:</label><br>
+        <input type="text" id="limite_un_pago" name="limite_un_pago"><br>
+        <label for="limite_en_cuotas">Límite en cuotas:</label><br>
+        <input type="text" id="limite_en_cuotas" name="limite_en_cuotas"><br>
+        <label for="cantidad_cuotas">Cantidad de cuotas:</label><br>
+        <input type="number" name="cantidad_cuotas" id="cantidad_cuotas"><br>
+        <button type="submit">Calcular máximos</button>
+    </form>
+    <div id="resultado"></div>
+    <script>
+        var lp = document.getElementById("limite_un_pago");
+        var lc = document.getElementById("limite_en_cuotas");
+        var cc = document.getElementById("cantidad_cuotas");
+        var resultadoElemento = document.getElementById("resultado");
+
+        // Add an event listener to the form submission
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from being submitted
+
+            // Get the values entered by the user
+            var limiteUnPago = parseFloat(lp.value);
+            var limiteEnCuotas = parseFloat(lc.value);
+            var cantidadCuotas = parseInt(cc.value);
+
+            // Perform the calculation
+            var maxEnCuotas = limiteEnCuotas / (1 - 1 / cantidadCuotas);
+
+            // Update the result element with the calculated value
+            resultadoElemento.textContent = "Máximo a gastar: " + maxEnCuotas.toFixed(2);
+        });
+    </script>
 </body>
 </html>
