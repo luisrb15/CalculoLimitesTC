@@ -9,16 +9,18 @@
 <body>
     <h1>Hola!</h1>
     <h3>Este es un cálculo simple para saber cuánto podés gastar en cuotas considerando los límites de tu tarjeta bancarizada</h3>
-    <form>
-        <label for="limite_un_pago">Límite en un pago:</label><br>
-        <input type="text" id="limite_un_pago" name="limite_un_pago"><br>
-        <label for="limite_en_cuotas">Límite en cuotas:</label><br>
-        <input type="text" id="limite_en_cuotas" name="limite_en_cuotas"><br>
-        <label for="cantidad_cuotas">Cantidad de cuotas:</label><br>
-        <input type="number" name="cantidad_cuotas" id="cantidad_cuotas"><br>
-        <button type="submit">Calcular máximos</button>
-    </form>
-    <div id="resultado"></div>
+    <div id="form">
+        <form>
+            <label for="limite_un_pago">Límite en un pago:</label><br>
+            <input type="text" id="limite_un_pago" name="limite_un_pago"><br>
+            <label for="limite_en_cuotas">Límite en cuotas:</label><br>
+            <input type="text" id="limite_en_cuotas" name="limite_en_cuotas"><br>
+            <label for="cantidad_cuotas">Cantidad de cuotas:</label><br>
+            <input type="number" name="cantidad_cuotas" id="cantidad_cuotas"><br>
+            <button type="submit">Calcular máximos</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
     <script>
         var lp = document.getElementById("limite_un_pago");
         var lc = document.getElementById("limite_en_cuotas");

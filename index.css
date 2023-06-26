@@ -1,4 +1,14 @@
-h1 {
+h1{
     text-align: center;
     color: rgb(59, 59, 59);
+}
+
+#form {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 };
+
+#resultado{
+    color: rgb(59, 59, 59);
+}
