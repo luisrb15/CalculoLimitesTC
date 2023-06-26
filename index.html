@@ -36,6 +36,12 @@
             // Perform the calculation
             var maxEnCuotas = limiteEnCuotas / (1 - 1 / cantidadCuotas);
 
+            // Verify one payment limit
+            var cuota = maxEnCuotas / cantidadCuotas;
+            if (limiteUnPago < cuota) {
+                maxEnCuotas = limiteUnPago * cantidadCuotas
+            }
+
             // Update the result element with the calculated value
             resultadoElemento.textContent = "Máximo a gastar: " + maxEnCuotas.toFixed(2);
         });
