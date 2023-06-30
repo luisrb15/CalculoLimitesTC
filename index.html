@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
     <h1>Hola!</h1>
     <h3>Este es un cálculo simple para saber cuánto podés gastar en cuotas considerando los límites de tu tarjeta bancarizada</h3>
-    <div id="form">
+    <div class="mb-3" id="form">
         <form>
-            <label for="limite_un_pago">Límite en un pago:</label><br>
-            <input type="text" id="limite_un_pago" name="limite_un_pago"><br>
-            <label for="limite_en_cuotas">Límite en cuotas:</label><br>
-            <input type="text" id="limite_en_cuotas" name="limite_en_cuotas"><br>
-            <label for="cantidad_cuotas">Cantidad de cuotas:</label><br>
-            <input type="number" name="cantidad_cuotas" id="cantidad_cuotas"><br>
-            <button type="submit">Calcular máximos</button>
+            <label for="limite_un_pago" class="form-label">Límite en un pago:</label>
+            <input type="text" id="limite_un_pago" name="limite_un_pago" class="form-control">
+            <label for="limite_en_cuotas" class="form-label">Límite en cuotas:</label>
+            <input type="text" id="limite_en_cuotas" name="limite_en_cuotas" class="form-control">
+            <label for="cantidad_cuotas" class="form-label">Cantidad de cuotas:</label>
+            <input type="number" name="cantidad_cuotas" id="cantidad_cuotas" class="form-control"><br>
+            <button type="submit" class="btn btn-secondary">Calcular máximos</button>
         </form>
         <div id="resultado"></div>
     </div>
@@ -49,5 +50,6 @@
             resultadoElemento.textContent = "Máximo a gastar: " + maxEnCuotas.toFixed(2);
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
